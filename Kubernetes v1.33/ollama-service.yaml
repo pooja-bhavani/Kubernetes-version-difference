@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: ollama-service
 spec:
-  type: NodePort
   selector:
-    app: ollama-server
+    app: ollama
   ports:
     - protocol: TCP
       port: 11434
       targetPort: 11434
-      nodePort: 31134
+  type: NodePort 
+
