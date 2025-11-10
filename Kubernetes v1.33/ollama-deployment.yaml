@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ollama
+  name: ollama-v133
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ollama
+      app: ollama-v133
   template:
     metadata:
       labels:
-        app: ollama
+        app: ollama-v133
     spec:
       containers:
       - name: ollama
@@ -19,8 +19,11 @@ spec:
         - containerPort: 11434
         resources:
           requests:
-            memory: "1Gi"
-            cpu: "500m"
+            memory: "2Gi"
+            cpu: "1"
           limits:
             memory: "2Gi"
             cpu: "1"
+        env:
+        - name: OLLAMA_HOST
+          value: "0.0.0.0"
