@@ -1,7 +1,7 @@
 # Kubernetes v1.34 vs v1.33 
 
 ## 🎯 Project Objective
-
+---
 **Phase 1 Docker Foundation**
 
 - Set up Ollama with Docker for local AI model deployment
