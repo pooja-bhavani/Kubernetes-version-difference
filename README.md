@@ -19,9 +19,9 @@
 
 ## Prerequisites
 - Docker installation
-- 
+- Kind (Kubernetes inside Docker)
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Pull and Run Ollama Container
 ```bash
