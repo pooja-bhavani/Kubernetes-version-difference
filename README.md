@@ -49,7 +49,10 @@ docker exec -it ollama ollama pull tinyllama       # 637MB
 docker exec -it ollama ollama pull llama3.2:1b 
 docker exec -it ollama ollama run llama3.2:1b # 1.3GB 
 ```
-![alt text](image-12.png)
+<img width="1908" height="310" alt="image" src="https://github.com/user-attachments/assets/f6c73f7c-5599-4c42-a33d-b68d86504c5e" />
+
+<img width="2539" height="787" alt="image" src="https://github.com/user-attachments/assets/02564008-1480-4b0e-b0e2-4109c84cfd2a" />
+
 
 
 
