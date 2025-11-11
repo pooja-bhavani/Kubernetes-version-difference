@@ -31,32 +31,6 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 <img width="1402" height="235" alt="image" src="https://github.com/user-attachments/assets/11e47531-0611-428c-af76-9b42c61bcf39" />
 
 
-<img width="2541" height="865" alt="image" src="https://github.com/user-attachments/assets/d09c25c5-653f-4cea-be2b-a1d0616d161c" />
-
-# Kubernetes v1.34 vs v1.33 
-
-## 🎯 Project Objective
-
-**Phase 1 Docker Foundation**
-
-- Set up Ollama with Docker for local AI model deployment
-- Test different LLM models and document performance
-- Deployed Ollama with multiple AI models
-- Tested performance across different model sizes
-- Compared qwen2.5:0.5b vs llama3.2:1b vs tinyllama
-
-**Phase 2 :** Kubernetes Migration
-
-- Deploy Ollama on Kubernetes v1.33 (kind cluster)
-- Identify resource allocation challenges
-- Research Kubernetes v1.34 dynamic resource benefits
-- Create POC demonstrating business value of upgrade
-
-## Prerequisites
-- Docker installed and running
-- Minimum 4GB RAM available
-- Internet connection for model downloads
-
 ## 🚀 Quick Start
 
 ### 1. Testing LLM on Docker
