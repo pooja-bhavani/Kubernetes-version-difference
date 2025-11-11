@@ -32,9 +32,7 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 <img width="1183" height="87" alt="image" src="https://github.com/user-attachments/assets/128d1b25-332d-4271-88cb-2681dd107d1f" />
 
 
-## 🚀 Quick Start
-
-### 1. Testing LLM on Docker
+### 2. Testing LLM on Docker
 
 #### To Pull Multiple AI Models (optional)
 ```bash
@@ -43,16 +41,6 @@ docker exec -it ollama ollama pull qwen2.5:0.5b    # 394MB
 docker exec -it ollama ollama pull tinyllama       # 637MB 
 ```
 <img width="1359" height="145" alt="image" src="https://github.com/user-attachments/assets/c611036b-dad4-4f72-8d0c-33725edd896f" />
-
-
-### 1. Pull and Run Ollama Container
-
-```bash
-docker pull ollama/ollama
-
-docker run -d -p 11434:11434 --name ollama ollama/ollama
-```
-<img width="1402" height="235" alt="image" src="https://github.com/user-attachments/assets/391f57b7-d4ed-4d48-97eb-97fe0da16e02" />
 
 
 
