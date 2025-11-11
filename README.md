@@ -8,6 +8,7 @@
 - Deployed Ollama with multiple AI models
 - Tested performance across different model sizes
 - Compared qwen2.5:0.5b vs llama3.2:1b vs tinyllama
+- Understanding of LLM deployment basics
 
 **Phase 2 :** Kubernetes Migration
 
