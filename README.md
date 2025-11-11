@@ -34,6 +34,7 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 <img width="2541" height="865" alt="image" src="https://github.com/user-attachments/assets/d09c25c5-653f-4cea-be2b-a1d0616d161c" />
 
 
+
 ### 2. To Pull Multiple AI Models (optional)
 ```bash
 # Lightweight options 
@@ -51,4 +52,11 @@ docker exec -it ollama ollama pull llama3.2:1b     # 1.3GB
 | tinyllama | 637MB | Development | Good | Simple, adds extra examples |
 | llama3.2:1b | 1.3GB | Production | Better | Detailed, step-by-step |
 
+# 🚀 Kubernetes Migration Steps
 
+### Environment Setup
+
+- **v1.33 Cluster:** kind cluster with ollama-v133 deployment
+- **v1.34 Cluster:** kind cluster with ollama-v134 deployment  
+- **Test Workload:** Ollama AI server with llama3.2:1b model (1.3GB)
+- **Testing Period:** Real production simulation
