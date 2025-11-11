@@ -33,6 +33,61 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 
 <img width="2541" height="865" alt="image" src="https://github.com/user-attachments/assets/d09c25c5-653f-4cea-be2b-a1d0616d161c" />
 
+# Kubernetes v1.34 vs v1.33 
+
+## 🎯 Project Objective
+
+**Phase 1 Docker Foundation**
+
+- Set up Ollama with Docker for local AI model deployment
+- Test different LLM models and document performance
+- Deployed Ollama with multiple AI models
+- Tested performance across different model sizes
+- Compared qwen2.5:0.5b vs llama3.2:1b vs tinyllama
+
+**Phase 2 :** Kubernetes Migration
+
+- Deploy Ollama on Kubernetes v1.33 (kind cluster)
+- Identify resource allocation challenges
+- Research Kubernetes v1.34 dynamic resource benefits
+- Create POC demonstrating business value of upgrade
+
+## Prerequisites
+- Docker installed and running
+- Minimum 4GB RAM available
+- Internet connection for model downloads
+
+## 🚀 Quick Start
+
+### 1. Testing LLM on Docker
+
+#### To Pull Multiple AI Models (optional)
+```bash
+# Lightweight options 
+docker exec -it ollama ollama pull qwen2.5:0.5b    # 394MB 
+docker exec -it ollama ollama pull tinyllama       # 637MB 
+```
+<img width="1359" height="145" alt="image" src="https://github.com/user-attachments/assets/c611036b-dad4-4f72-8d0c-33725edd896f" />
+
+
+### 1. Pull and Run Ollama Container
+
+```bash
+docker pull ollama/ollama
+
+docker run -d -p 11434:11434 --name ollama ollama/ollama
+```
+<img width="1402" height="235" alt="image" src="https://github.com/user-attachments/assets/391f57b7-d4ed-4d48-97eb-97fe0da16e02" />
+
+
+
+### Pull and Run llama3.2:1b inside Docker Container
+```bash
+docker exec -it ollama ollama pull llama3.2:1b 
+docker exec -it ollama ollama run llama3.2:1b # 1.3GB 
+```
+![alt text](image-12.png)
+
 
 
 ### 2. To Pull Multiple AI Models (optional)
@@ -60,3 +115,5 @@ docker exec -it ollama ollama pull llama3.2:1b     # 1.3GB
 - **v1.34 Cluster:** kind cluster with ollama-v134 deployment  
 - **Test Workload:** Ollama AI server with llama3.2:1b model (1.3GB)
 - **Testing Period:** Real production simulation
+
+
