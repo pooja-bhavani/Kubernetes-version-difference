@@ -42,4 +42,12 @@ docker exec -it ollama ollama pull llama3.2:1b     # 1.3GB
 ```
 <img width="1359" height="145" alt="image" src="https://github.com/user-attachments/assets/0c17c295-8ae0-47ed-b2c8-6da38565ed5e" />
 
+## 📊 Model Comparison & Test Results
+
+| Model | Size | Use Case | Performance | Response Quality |
+|-------|------|----------|-------------|------------------|
+| qwen2.5:0.5b | 394MB | Quick testing | Basic |Concise, accurate |
+| tinyllama | 637MB | Development | Good | Simple, adds extra examples |
+| llama3.2:1b | 1.3GB | Production | Better | Detailed, step-by-step |
+
 
