@@ -29,9 +29,11 @@
 docker pull ollama/ollama
 docker run -d -p 11434:11434 --name ollama ollama/ollama
 ```
-![alt text](image.png)
+<img width="1402" height="235" alt="image" src="https://github.com/user-attachments/assets/11e47531-0611-428c-af76-9b42c61bcf39" />
 
-![alt text](image-9.png)
+
+<img width="2541" height="865" alt="image" src="https://github.com/user-attachments/assets/d09c25c5-653f-4cea-be2b-a1d0616d161c" />
+
 
 ### 2. To Pull Multiple AI Models (optional)
 ```bash
@@ -40,5 +42,6 @@ docker exec -it ollama ollama pull qwen2.5:0.5b    # 394MB
 docker exec -it ollama ollama pull tinyllama       # 637MB 
 docker exec -it ollama ollama pull llama3.2:1b     # 1.3GB 
 ```
-![alt text](image-8.png)
+<img width="1359" height="145" alt="image" src="https://github.com/user-attachments/assets/0c17c295-8ae0-47ed-b2c8-6da38565ed5e" />
+
 
