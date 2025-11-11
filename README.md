@@ -34,7 +34,7 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 
 ### 2. Testing LLM on Docker
 
-#### To Pull Multiple AI Models (optional)
+#### You can Pull Multiple smaller AI Models for Performance Comparison (optional)
 ```bash
 # Lightweight options 
 docker exec -it ollama ollama pull qwen2.5:0.5b    # 394MB 
@@ -44,7 +44,7 @@ docker exec -it ollama ollama pull tinyllama       # 637MB
 
 
 
-### Pull and Run llama3.2:1b inside Docker Container
+### Production Model Testing - llama3.2:1b inside Docker Container
 ```bash
 docker exec -it ollama ollama pull llama3.2:1b 
 docker exec -it ollama ollama run llama3.2:1b # 1.3GB 
