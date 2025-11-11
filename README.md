@@ -17,9 +17,8 @@
 - Create POC demonstrating business value of upgrade
 
 ## Prerequisites
-- Docker installed and running
-- Minimum 4GB RAM available
-- Internet connection for model downloads
+- Docker installation
+- 
 
 ## 🚀 Quick Start
 
