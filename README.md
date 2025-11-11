@@ -23,7 +23,7 @@
 
 ##  Quick Start
 
-### 1. Pull and Run Ollama Container
+### 1. Ollama Containerization
 ```bash
 docker pull ollama/ollama
 docker run -d -p 11434:11434 --name ollama ollama/ollama
