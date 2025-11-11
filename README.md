@@ -44,7 +44,7 @@ docker exec -it ollama ollama pull tinyllama       # 637MB
 
 
 
-### Production Model Testing - llama3.2:1b inside Docker Container
+### 3. Production Model Testing - llama3.2:1b inside Docker Container
 ```bash
 docker exec -it ollama ollama pull llama3.2:1b 
 docker exec -it ollama ollama run llama3.2:1b # 1.3GB 
@@ -52,15 +52,6 @@ docker exec -it ollama ollama run llama3.2:1b # 1.3GB
 ![alt text](image-12.png)
 
 
-
-### 2. To Pull Multiple AI Models (optional)
-```bash
-# Lightweight options 
-docker exec -it ollama ollama pull qwen2.5:0.5b    # 394MB 
-docker exec -it ollama ollama pull tinyllama       # 637MB 
-docker exec -it ollama ollama pull llama3.2:1b     # 1.3GB 
-```
-<img width="1359" height="145" alt="image" src="https://github.com/user-attachments/assets/0c17c295-8ae0-47ed-b2c8-6da38565ed5e" />
 
 ## 📊 Model Comparison & Test Results
 
