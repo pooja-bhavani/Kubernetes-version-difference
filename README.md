@@ -26,7 +26,7 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 <img width="1402" height="235" alt="image" src="https://github.com/user-attachments/assets/11e47531-0611-428c-af76-9b42c61bcf39" />
 <img width="1183" height="87" alt="image" src="https://github.com/user-attachments/assets/128d1b25-332d-4271-88cb-2681dd107d1f" />
 
-# Download and test AI model
+### Download and test AI model
 ```bash
 docker exec -it ollama ollama pull llama3.2:1b
 docker exec -it ollama ollama run llama3.2:1b # 1.3GB 
