@@ -86,4 +86,24 @@ docker exec -it ollama ollama pull tinyllama       # 637MB
 - **Test Workload:** Ollama AI server with llama3.2:1b model (1.3GB)
 - **Testing Period:** Real production simulation
 
+### Kind Installation
+```
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-darwin-arm64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
+```
+```
+kind version
+```
+### Cluster Creation
+
+```bash
+# Create K8s v1.33 cluster (check if available)
+kind create cluster --name ollama-k8s --image kindest/node:v1.33.0
+```
+```bash
+# To display cluster information for  Kubernetes context
+kubectl cluster-info --context kind-ollama-k8s
+```
+
 
