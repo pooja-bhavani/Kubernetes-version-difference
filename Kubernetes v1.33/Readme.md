@@ -19,7 +19,6 @@ kubectl get pods
 ```
 kubectl exec -it <pod name> -- ollama pull llama3.2:1b 
 ```
-### Pull AI Model and run in K8s v1.33
 ```
 kubectl exec -it <pod name> -- ollama run llama3.2:1b 
 ```
