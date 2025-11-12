@@ -10,11 +10,11 @@ kind create cluster --name ollama-k8s-v134 --image kindest/node:v1.34.0
 ```
 kubectl get pods -A
 ```
-### Deploy Ollama with Pod-level resources
+### Deploy Ollama deployment for v1.34
 ```
 kubectl apply -f ollama-v134-deployment.yaml
 ```
-### Enable DRA features for GPU support
+### Deploy service YAML file
 ```
 kubectl apply -f dra-device-class.yaml
 ```
