@@ -1,5 +1,6 @@
 # Kubernetes v1.34 vs v1.33 Performance 
 
+## 🎯 Project Objective
 This project evaluates the performance differences between Kubernetes v1.33 and v1.34 for AI workload deployment, specifically testing Ollama AI server with large language models. The goal is to provide concrete evidence for upgrade decisions based on real-world testing with AI applications.
 
 Test Application: Ollama AI Server with llama3.2:1b model (1.3GB)
