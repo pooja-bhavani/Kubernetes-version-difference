@@ -109,5 +109,28 @@ kubectl cluster-info --context kind-ollama-k8s
 <img width="1644" height="506" alt="image" src="https://github.com/user-attachments/assets/b12c99d5-85cd-4088-a912-c2d007e5700c" />
 <img width="1725" height="678" alt="image" src="https://github.com/user-attachments/assets/7f162a28-3bbb-4bb4-a7b0-a3e317498b15" />
 
+# Kubernetes v1.33 Testing
 
+### Apply Deployment file
+```
+kubectl apply -f ollama-deployment-v1.33.yaml   
+```
+
+### Apply service file
+```
+kubectl apply -f ollama-service-v1.33.yaml
+```
+
+### Check Pods status
+```
+kubectl get pods
+```
+
+## Pull AI Model and run in K8s v1.33
+```
+kubectl exec -it <pod name> -- ollama pull llama3.2:1b 
+```
+```
+kubectl exec -it <pod name> -- ollama run llama3.2:1b 
+```
 
