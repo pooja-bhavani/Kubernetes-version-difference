@@ -16,5 +16,5 @@ kubectl apply -f ollama-v134-deployment.yaml
 ```
 ### Deploy service YAML file
 ```
-kubectl apply -f dra-device-class.yaml
+kubectl apply -f ollama-v134-service.yaml
 ```
