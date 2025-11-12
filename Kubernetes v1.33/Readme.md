@@ -1,12 +1,12 @@
-```bash
+```
 # Apply you Deployment file
 kubectl apply -f ollama-deployment-v1.33.yaml   
 ```
-```bash
+```
 # Check Pods status
 kubectl get pods
 ```
-```bash
+```
 # Apply you service file
 kubectl apply -f ollama-service-v1.33.yaml
 ```
