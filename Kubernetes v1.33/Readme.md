@@ -41,8 +41,9 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 - Cannot run multiple AI models simultaneously
 - Poor user experience for AI applications
 
+---
 
-### Problems Identified
+x ### Problems Identified
 
 #### 1. Deployment Performance Issues
 - **Model downloads:** 19+ minutes (vs 3-10 min with Docker)
