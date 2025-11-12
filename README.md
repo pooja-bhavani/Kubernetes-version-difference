@@ -66,7 +66,7 @@ docker exec -it ollama ollama run llama3.2:1b # 1.3GB
 # Lightweight options (choose one)
 docker exec -it ollama ollama pull qwen2.5:0.5b    # 394MB - 1-3 min
 docker exec -it ollama ollama pull tinyllama       # 637MB - 2-5 min
-
+```
 
 
 ## 📊 Model Comparison & Test Results
