@@ -95,14 +95,14 @@ sudo mv ./kind /usr/local/bin/kind
 ```
 kind version
 ```
-### Cluster Creation
+## Cluster Creation
 
-# Create K8s v1.33 cluster (check if available)
+### Create K8s v1.33 cluster (check if available)
 ```
 kind create cluster --name ollama-k8s --image kindest/node:v1.33.0
 ```
 
-# To display cluster information for  Kubernetes context
+### To display cluster information for  Kubernetes context
 ```
 kubectl cluster-info --context kind-ollama-k8s
 ```
