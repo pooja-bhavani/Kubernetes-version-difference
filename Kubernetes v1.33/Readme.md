@@ -1,6 +1,6 @@
 # Kubernetes v1.33 Configuration
 
-### Apply your Deployment file
+### Apply Deployment file
 ```
 kubectl apply -f ollama-deployment-v1.33.yaml   
 ```
@@ -10,7 +10,7 @@ kubectl apply -f ollama-deployment-v1.33.yaml
 kubectl get pods
 ```
 
-### Apply you service file
+### Apply service file
 ```
 kubectl apply -f ollama-service-v1.33.yaml
 ```
