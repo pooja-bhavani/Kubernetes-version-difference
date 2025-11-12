@@ -23,7 +23,6 @@ kubectl exec -it <pod name> -- ollama pull llama3.2:1b
 kubectl exec -it <pod name> -- ollama run llama3.2:1b 
 ```
 <img width="2161" height="738" alt="image" src="https://github.com/user-attachments/assets/3be0d8d6-5a9f-4040-b6bb-511f07390fcb" />
-<img width="1908" height="310" alt="image" src="https://github.com/user-attachments/assets/7b2f4409-658f-463c-8993-9c2111e1b94b" />
 
 ---
 
