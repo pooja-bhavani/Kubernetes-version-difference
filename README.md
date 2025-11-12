@@ -35,7 +35,7 @@ docker exec -it ollama ollama run llama3.2:1b # 1.3GB
 
 <img width="2539" height="787" alt="image" src="https://github.com/user-attachments/assets/02564008-1480-4b0e-b0e2-4109c84cfd2a" />
 
-*✅Successfully running llama3.2:1b AI model on Docker* 
+*✅ Successfully running llama3.2:1b AI model on Docker* 
 ---
 
 **Docker Results:**
