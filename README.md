@@ -86,7 +86,7 @@ docker exec -it ollama ollama pull tinyllama       # 637MB
 - **Test Workload:** Ollama AI server with llama3.2:1b model (1.3GB)
 - **Testing Period:** Real production simulation
 
-### Kind Installation
+### Phase 2: Kind Installation
 ```
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-darwin-arm64
 chmod +x ./kind
