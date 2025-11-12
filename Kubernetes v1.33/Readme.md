@@ -40,3 +40,26 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 - Long deployment times (19+ minutes)
 - Cannot run multiple AI models simultaneously
 - Poor user experience for AI applications
+
+
+### Problems Identified
+
+#### 1. Deployment Performance Issues
+- **Model downloads:** 19+ minutes (vs 3-10 min with Docker)
+- **Image pulls:** Slow network optimization
+- **Startup times:** Unacceptable for production scaling
+
+#### 2. Memory Management Failures
+- **OOM kills:** Exit code 137 when running llama3.2:1b
+- **Multi-model conflicts:** Cannot run multiple AI models simultaneously
+- **Fixed limits:** 2Gi insufficient for larger models (1.3GB + overhead)
+
+#### 3. Inference Performance Degradation
+- **Slow responses:** 3-5x slower than Docker deployment
+- **Resource starvation:** CPU/memory constraints affect user experience
+- **No GPU support:** Limited to CPU-only inference
+
+#### 4. Operational Challenges
+- **Resource planning:** Fixed allocation prevents optimization
+- **Scaling limitations:** Cannot dynamically adjust to workload demands
+- **Model management:** Poor handling of multiple AI models
