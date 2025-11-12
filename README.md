@@ -111,6 +111,8 @@ kubectl cluster-info --context kind-ollama-k8s
 
 # Kubernetes v1.33 Testing
 
+### [Kubernetes v1.33]
+
 ### Apply Deployment file
 ```
 kubectl apply -f ollama-deployment-v1.33.yaml   
