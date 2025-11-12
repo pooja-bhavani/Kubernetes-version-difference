@@ -7,6 +7,22 @@ Test Application: Ollama AI Server with llama3.2:1b model (1.3GB)
 Comparison Baseline: Docker deployment performance
 Testing Methodology: Hands-on deployment and performance measurement
 
+**Phase 1 Docker Foundation**
+
+- Set up Ollama with Docker for local AI model deployment
+- Test different LLM models and document performance
+- Deployed Ollama with multiple AI models
+- Tested performance across different model sizes
+- Compared qwen2.5:0.5b vs llama3.2:1b vs tinyllama
+- Understanding of LLM deployment basics
+
+**Phase 2 :** Kubernetes Migration
+
+- Deploy Ollama on Kubernetes v1.33 (kind cluster)
+- Identify resource allocation challenges
+- Deploy Ollama on Kubernetes v1.34 (kind cluster) 
+- Demonstrating business value of upgrade
+
 ## 📋 Prerequisites
 
 - **Hardware:** Minimum 4GB RAM, 8 CPU cores
