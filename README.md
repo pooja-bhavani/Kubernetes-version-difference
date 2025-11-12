@@ -34,8 +34,8 @@ Testing Methodology: Hands-on deployment and performance measurement
 
 ### Phase 1: Docker Baseline Testing
 
-```bash
 # Pull and run Ollama container
+```
 docker pull ollama/ollama
 docker run -d -p 11434:11434 --name ollama ollama/ollama
 ```
@@ -43,7 +43,7 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 <img width="1183" height="87" alt="image" src="https://github.com/user-attachments/assets/128d1b25-332d-4271-88cb-2681dd107d1f" />
 
 ### Download and test AI model
-```bash
+```
 docker exec -it ollama ollama pull llama3.2:1b
 docker exec -it ollama ollama run llama3.2:1b # 1.3GB 
 ```
@@ -62,8 +62,9 @@ docker exec -it ollama ollama run llama3.2:1b # 1.3GB
 ---
 
 ### 2. Different AI Models Pulls (Optional)
-```bash
+
 # Lightweight options (choose one)
+```
 docker exec -it ollama ollama pull qwen2.5:0.5b    # 394MB 
 docker exec -it ollama ollama pull tinyllama       # 637MB 
 ```
