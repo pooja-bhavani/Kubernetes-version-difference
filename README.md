@@ -47,8 +47,6 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 docker exec -it ollama ollama pull llama3.2:1b
 docker exec -it ollama ollama run llama3.2:1b # 1.3GB 
 ```
-<img width="1908" height="310" alt="image" src="https://github.com/user-attachments/assets/f6c73f7c-5599-4c42-a33d-b68d86504c5e" />
-<img width="1908" height="310" alt="image" src="https://github.com/user-attachments/assets/19b309f6-d1de-4686-8680-895c40817211" />
 
 <img width="1983" height="1415" alt="image" src="https://github.com/user-attachments/assets/97e52ef8-72df-4eed-9dff-5e73086bda84" />
 
