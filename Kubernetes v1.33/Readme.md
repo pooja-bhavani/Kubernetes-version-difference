@@ -1,15 +1,16 @@
+# Kubernetes v1.33 Configuration
 
-# Apply you Deployment file
+## Apply your Deployment file
 ```
 kubectl apply -f ollama-deployment-v1.33.yaml   
 ```
 
-# Check Pods status
+## Check Pods status
 ```
 kubectl get pods
 ```
 
-# Apply you service file
+## Apply you service file
 ```
 kubectl apply -f ollama-service-v1.33.yaml
 ```
