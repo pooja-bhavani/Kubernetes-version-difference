@@ -1,29 +1,38 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ollama-v133
+ name: ollama-v133
+ labels:
+   app: ollama-v133
+   version: v1.33
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: ollama-v133
-  template:
-    metadata:
-      labels:
-        app: ollama-v133
-    spec:
-      containers:
-      - name: ollama
-        image: ollama/ollama:latest
-        ports:
-        - containerPort: 11434
-        resources:
-          requests:
-            memory: "2Gi"
-            cpu: "1"
-          limits:
-            memory: "2Gi"
-            cpu: "1"
-        env:
-        - name: OLLAMA_HOST
-          value: "0.0.0.0"
+ replicas: 1
+ selector:
+   matchLabels:
+     app: ollama-v133
+ template:
+   metadata:
+     labels:
+       app: ollama-v133
+   spec:
+     containers:
+     - name: ollama
+       image: ollama/ollama:latest
+       ports:
+       - containerPort: 11434
+       resources:
+         requests:
+           memory: "2Gi"
+           cpu: "1"
+         limits:
+           memory: "2Gi"
+           cpu: "1"
+       env:
+       - name: OLLAMA_HOST
+         value: "0.0.0.0"
+       volumeMounts:
+       - name: ollama-data
+         mountPath: /root/.ollama
+     volumes:
+     - name: ollama-data
+       emptyDir: {}
