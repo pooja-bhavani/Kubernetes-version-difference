@@ -16,7 +16,7 @@ Testing Methodology: Hands-on deployment and performance measurement
 - Compared qwen2.5:0.5b vs llama3.2:1b vs tinyllama
 - Understanding of LLM deployment basics
 
-**Phase 2 :** Kubernetes Migration
+**Phase 2 : Kubernetes Migration**
 
 - Deploy Ollama on Kubernetes v1.33 (kind cluster)
 - Identify resource allocation challenges
