@@ -59,62 +59,14 @@ docker exec -it ollama ollama run llama3.2:1b # 1.3GB
 - **Model Performance:** Responsive, smooth interaction
 - **Resource Usage:** Stable, no crashes
 - **User Experience:** Professional-grade performance
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 🎯 Project Objective
-**Phase 1 Docker Foundation**
-
-- Set up Ollama with Docker for local AI model deployment
-- Test different LLM models and document performance
-- Deployed Ollama with multiple AI models
-- Tested performance across different model sizes
-- Compared qwen2.5:0.5b vs llama3.2:1b vs tinyllama
-- Understanding of LLM deployment basics
-
-**Phase 2 :** Kubernetes Migration
-
-- Deploy Ollama on Kubernetes v1.33 (kind cluster)
-- Identify resource allocation challenges
-- Research Kubernetes v1.34 dynamic resource benefits
-- Create POC demonstrating business value of upgrade
-
-## Prerequisites
-- Docker installation
-- Kind (Kubernetes inside Docker)
-
-##  Quick Start
-
-### 3. Production Model Testing - llama3.2:1b inside Docker Container
-```bash
-docker exec -it ollama ollama pull llama3.2:1b 
-docker exec -it ollama ollama run llama3.2:1b # 1.3GB 
-```
-<img width="1908" height="310" alt="image" src="https://github.com/user-attachments/assets/f6c73f7c-5599-4c42-a33d-b68d86504c5e" />
-
-<img width="2539" height="787" alt="image" src="https://github.com/user-attachments/assets/02564008-1480-4b0e-b0e2-4109c84cfd2a" />
-
-*llama3.2:1b AI model running successfully on Docker - baseline for Kubernetes comparison*
 ---
+
+### 2. Different AI Models Pulls (Optional)
+```bash
+# Lightweight options (choose one)
+docker exec -it ollama ollama pull qwen2.5:0.5b    # 394MB - 1-3 min
+docker exec -it ollama ollama pull tinyllama       # 637MB - 2-5 min
+
 
 
 ## 📊 Model Comparison & Test Results
