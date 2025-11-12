@@ -55,7 +55,6 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 - **Fixed limits:** 2Gi insufficient for larger models (1.3GB + overhead)
 
 #### 3. Inference Performance Degradation
-- **Slow responses:** 3-5x slower than Docker deployment
 - **Resource starvation:** CPU/memory constraints affect user experience
 - **No GPU support:** Limited to CPU-only inference
 
