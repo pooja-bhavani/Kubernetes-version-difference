@@ -37,6 +37,6 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 - **Critical:** Very slow AI inference performance
 - **Critical:** OOM kills with large models (Exit 137)
 - Fixed resource allocation causes waste
-- Long deployment times (16+ minutes)
+- Long deployment times (19+ minutes)
 - Cannot run multiple AI models simultaneously
 - Poor user experience for AI applications
