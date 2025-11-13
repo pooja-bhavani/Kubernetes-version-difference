@@ -6,7 +6,7 @@
 2. Later recreate with DRA config for advanced features
 
 ### DRA Testing Options
-[DRA-kind-cluster](DRA-kind-cluster.yaml)
+[DRA-kind-cluster.yaml](DRA-kind-cluster.yaml)
 
 ### Create K8s v1.33 cluster (check if available)
 ```
