@@ -120,6 +120,4 @@ sudo mv ./kind /usr/local/bin/kind
 ```
 kind version
 ```
-<img width="1644" height="506" alt="image" src="https://github.com/user-attachments/assets/b12c99d5-85cd-4088-a912-c2d007e5700c" />
-<img width="1725" height="678" alt="image" src="https://github.com/user-attachments/assets/7f162a28-3bbb-4bb4-a7b0-a3e317498b15" />
 
