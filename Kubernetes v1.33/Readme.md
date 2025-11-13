@@ -25,6 +25,43 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 <img width="2161" height="738" alt="image" src="https://github.com/user-attachments/assets/3be0d8d6-5a9f-4040-b6bb-511f07390fcb" />
 
 ---
+# DRA Testing Options
+
+## Option A: Simple Start (Recommended)
+1. Create basic cluster for Ollama testing
+2. Later recreate with DRA config for advanced features
+
+[Link Text](relative/path/to/your/file.yaml)
+[Kubernetes](v1.33/DRA-kind-cluster.yaml)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Kubernetes v1.33
 **Advantages:**
