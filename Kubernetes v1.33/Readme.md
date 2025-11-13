@@ -1,3 +1,26 @@
+
+## Cluster Creation
+
+## Simple Start (Recommended)
+1. Create basic cluster for Ollama testing
+2. Later recreate with DRA config for advanced features
+
+### DRA Testing Options
+[DRA-kind-cluster](DRA-kind-cluster.yaml)
+
+### Create K8s v1.33 cluster (check if available)
+```
+kind create cluster --name ollama-k8s --image kindest/node:v1.33.0
+```
+
+### To display cluster information for  Kubernetes context
+```
+kubectl cluster-info --context kind-ollama-k8s
+```
+
+<img width="1644" height="506" alt="image" src="https://github.com/user-attachments/assets/842d7234-3075-4075-9caa-41a730105218" />
+<img width="1725" height="678" alt="image" src="https://github.com/user-attachments/assets/13599c1c-118e-4237-a3bd-9f750b5f066d" />
+
 # Kubernetes v1.33 Testing
 
 ### Apply Deployment file
@@ -25,28 +48,6 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 <img width="2161" height="738" alt="image" src="https://github.com/user-attachments/assets/3be0d8d6-5a9f-4040-b6bb-511f07390fcb" />
 
 ---
-
-## Cluster Creation
-
-## Simple Start (Recommended)
-1. Create basic cluster for Ollama testing
-2. Later recreate with DRA config for advanced features
-
-### DRA Testing Options
-[DRA-kind-cluster](DRA-kind-cluster.yaml)
-
-### Create K8s v1.33 cluster (check if available)
-```
-kind create cluster --name ollama-k8s --image kindest/node:v1.33.0
-```
-
-### To display cluster information for  Kubernetes context
-```
-kubectl cluster-info --context kind-ollama-k8s
-```
-
-<img width="1644" height="506" alt="image" src="https://github.com/user-attachments/assets/842d7234-3075-4075-9caa-41a730105218" />
-<img width="1725" height="678" alt="image" src="https://github.com/user-attachments/assets/13599c1c-118e-4237-a3bd-9f750b5f066d" />
 
 
 
