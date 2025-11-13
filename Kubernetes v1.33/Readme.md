@@ -32,6 +32,9 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 1. Create basic cluster for Ollama testing
 2. Later recreate with DRA config for advanced features
 
+### DRA Testing Options
+[DRA-kind-cluster](DRA-kind-cluster.yaml)
+
 ### Create K8s v1.33 cluster (check if available)
 ```
 kind create cluster --name ollama-k8s --image kindest/node:v1.33.0
@@ -41,9 +44,6 @@ kind create cluster --name ollama-k8s --image kindest/node:v1.33.0
 ```
 kubectl cluster-info --context kind-ollama-k8s
 ```
-## DRA Testing Options
-[DRA-kind-cluster](DRA-kind-cluster.yaml)
-
 
 <img width="1644" height="506" alt="image" src="https://github.com/user-attachments/assets/842d7234-3075-4075-9caa-41a730105218" />
 <img width="1725" height="678" alt="image" src="https://github.com/user-attachments/assets/13599c1c-118e-4237-a3bd-9f750b5f066d" />
