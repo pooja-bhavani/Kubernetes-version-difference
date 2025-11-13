@@ -39,11 +39,14 @@ Testing Methodology: Hands-on deployment and performance measurement
 6. [Testing & Validation](#testing--validation)
 7. [Production Rollout](#production-rollout)
 8. [Troubleshooting Guide](#troubleshooting-guide)
+
+   
 ## 📋 Prerequisites
 
-- **Hardware:** Minimum 4GB RAM, 8 CPU cores
-- **Software:** Docker, kubectl, kind
-- **Network:** Internet connection for image/model downloads
+- Docker Desktop
+- kubectl
+- kind (Kubernetes in Docker)
+- 8GB+ RAM, 4+ CPU cores
 
 ##  Quick Start
 
