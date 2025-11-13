@@ -32,7 +32,11 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 2. Later recreate with DRA config for advanced features
 
 [Kubernetes-version-difference Kubernetes v1.33](DRA-kind-cluster.yaml)
+
+
 [file](DRA-kind-cluster.yaml)
+
+
 
 
 
