@@ -23,6 +23,16 @@ Testing Methodology: Hands-on deployment and performance measurement
 - Deploy Ollama on Kubernetes v1.34 (kind cluster) 
 - Demonstrating business value of upgrade
 
+
+## Table of Contents
+1. [Pre-Migration Assessment](#pre-migration-assessment)
+2. [Environment Setup](#environment-setup)
+3. [DRA Implementation](#dra-implementation)
+4. [PodReplacementPolicy Configuration](#podreplacement-policy-configuration)
+5. [Pod-level Resources Deployment](#pod-level-resources-deployment)
+6. [Testing & Validation](#testing--validation)
+7. [Production Rollout](#production-rollout)
+8. [Troubleshooting Guide](#troubleshooting-guide)
 ## 📋 Prerequisites
 
 - **Hardware:** Minimum 4GB RAM, 8 CPU cores
