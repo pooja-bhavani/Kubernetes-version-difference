@@ -50,6 +50,17 @@ Testing Methodology: Hands-on deployment and performance measurement
 
 ##  Quick Start
 
+# Clone repository
+```
+git clone https://github.com/yourusername/kubernetes-v133-v134-comparison
+cd kubernetes-v133-v134-comparison
+```
+
+# Run automated comparison
+./scripts/setup-clusters.sh
+./scripts/deploy-ollama.sh
+./scripts/run-tests.sh
+
 
 ### Phase 1: Docker Baseline Testing
 
