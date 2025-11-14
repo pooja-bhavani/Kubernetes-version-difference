@@ -76,7 +76,7 @@ kubectl apply -f v1.33-files/dra-v133-device-class.yaml
 ```
 ## Create ResourceClaimTemplate
 
-[dra-v133-gpu-workload.yaml](dra-v133-gpu-workload.yaml)
+[dra-v133-gpu-workload.yaml](dra/dra-v133-gpu-workload.yaml)
 ```
 kubectl apply -f v1.33-files/dra-v133-gpu-workload.yaml
 ```
@@ -113,7 +113,7 @@ kubectl apply -f pod-replacement-policy-v133. yaml
 ### Test 3: DRA Alpha APIs
 
 - Deploy Ollama with DRA configuration
-[ollama-with-dra-v133.yaml](ollama-with-dra-v133.yaml)
+[ollama-with-dra-v133.yaml](dra/ollama-with-dra-v133.yaml)
 ```
 kubectl apply -f v1.33-files/ollama-with-dra-v133.yaml
 ```
