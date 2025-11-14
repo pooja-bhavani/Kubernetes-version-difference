@@ -83,7 +83,6 @@ kubectl apply -f v1.33-files/dra-v133-device-class.yaml
 kubectl apply -f v1.33-files/dra-v133-gpu-workload.yaml
 ```
 <img width="1434" height="279" alt="image" src="https://github.com/user-attachments/assets/c063e734-c02e-484a-a97b-5d9595a050e8" />
-<img width="1473" height="309" alt="image" src="https://github.com/user-attachments/assets/13167abc-603e-4a88-88e0-5a4ac3673349" />
 
 #### 4 pods can share 1 GPU through time-slicing with 1-second intervals, instead of needing 4 separate GPUs.
 
