@@ -107,7 +107,7 @@ kubectl apply -f multi-container-v133-per-container-resources.yaml
 
 ### Test 2: Job Replacement Behavior
 [pod-replacement-policy-v133.yaml](pod-replacement-policy-v133.yaml)
-Kubernetes v1.33/pod-replacement-policy-v133.yaml
+
 ```
 kubectl apply -f pod-replacement-policy-v133.yaml
 ```
