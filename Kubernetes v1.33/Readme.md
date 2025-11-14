@@ -30,6 +30,7 @@ kubectl apply -f ollama-deployment-v1.33.yaml
 ```
 
 ### Apply service file
+[ollama-service-v1.33.yaml](ollama-service-v1.33.yaml)
 ```
 kubectl apply -f ollama-service-v1.33.yaml
 ```
