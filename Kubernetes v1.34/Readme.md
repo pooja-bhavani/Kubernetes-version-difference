@@ -46,9 +46,12 @@ kubectl config use-context kind-k8s-v134
 ```
 kubectl apply -f dra-v1.34-device-class.yaml 
 ```
-
-
-
+# Deploy the 8-pod GPU sharing workload
+[dra-v1.34-gpu-workload.yaml](dra-v1.34-gpu-workload.yaml)
+```
+kubectl apply -f dra-v1.34-gpu-workload.yaml
+```
+<img width="2314" height="650" alt="image" src="https://github.com/user-attachments/assets/9a31b000-1ea7-48cd-9a0e-d59d5157d2e7" />
 
 
 
