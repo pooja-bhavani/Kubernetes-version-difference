@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ai-training-job-v134
+  labels:
+    feature: pod-replacement-policy
+    version: v1.34
+spec:
+  podReplacementPolicy: Failed  # v1.34 stable feature
+  parallelism: 4
+  completions: 4
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: ai-trainer
+        image: busybox:1.35
+        command: ["sh", "-c"]
+        args:
+        - |
+          echo "AI Training Job with PodReplacementPolicy v1.34"
+          echo "Pod: $HOSTNAME"
+          echo "Simulating training workload..."
+          sleep 30
+          # Simulate random failure for demo
+          if [ $((RANDOM % 3)) -eq 0 ]; then
+            echo "Training failed - will be replaced efficiently"
+            exit 1
+          fi
+          echo "Training completed successfully"
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1"
