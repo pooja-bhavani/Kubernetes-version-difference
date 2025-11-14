@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ollama-dra-v133
+  labels:
+    app: ollama-dra-v133
+    version: v1.33
+    feature: dra-enabled
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ollama-dra-v133
+  template:
+    metadata:
+      labels:
+        app: ollama-dra-v133
+    spec:
+      resourceClaims:
+      - name: gpu-claim
+        source:
+          resourceClaimTemplateName: gpu-claim-template
+      containers:
+      - name: ollama
+        image: ollama/ollama:latest
+        ports:
+        - containerPort: 11434
+        env:
+        - name: OLLAMA_HOST
+          value: "0.0.0.0"
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1"
+          limits:
+            memory: "3Gi"
+            cpu: "2"
+          claims:
+          - name: gpu-claim
+        volumeMounts:
+        - name: ollama-data
+          mountPath: /root/.ollama
+      volumes:
+      - name: ollama-data
+        emptyDir:
+          sizeLimit: "10Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ollama-dra-v133-service
+  labels:
+    app: ollama-dra-v133
+spec:
+  selector:
+    app: ollama-dra-v133
+  ports:
+    - protocol: TCP
+      port: 11434
+      targetPort: 11434
+  type: ClusterIP
