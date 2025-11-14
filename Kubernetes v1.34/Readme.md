@@ -208,7 +208,7 @@ kubectl apply -f container-level-resources-v1.34.yaml
 
 **Pod-Level Resources Comparison Results**
 
-v1.33 (Container-Level) - OLD WAY ❌
+v1.33 (Container-Level) - Old Way 
 ```
 web-server:  500m CPU,  1Gi memory    (individual limits)
 cache:       200m CPU,  512Mi memory  (individual limits)  
@@ -217,9 +217,10 @@ worker:      100m CPU,  256Mi memory  (individual limits)
 Total:       800m CPU,  1792Mi memory (sum of all containers)
 ```
 
-v1.34 (Pod-Level) - NEW WAY ✅
-Pod-Level:   800m CPU,  1792Mi memory (shared pool)
+v1.34 (Pod-Level) - New Way 
 ```
+Pod-Level:   800m CPU,  1792Mi memory (shared pool)
+
 web-server:  No individual limits     (shares from pod pool)
 cache:       No individual limits     (shares from pod pool)
 worker:      No individual limits     (shares from pod pool)
