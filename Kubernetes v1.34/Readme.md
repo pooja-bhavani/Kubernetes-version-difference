@@ -77,6 +77,7 @@ kubectl apply -f https://raw.githubusercontent.com/NVIDIA/k8s-device-plugin/v0.1
 ```
 
 **2. Deploy DRA Resources**
+
 [dra-v1.34-device-class.yaml](dra.v1.34/dra-v1.34-device-class.yaml)
 
 [dra-v1.34-gpu-workload.yaml](dra.v1.34/dra-v1.34-gpu-workload.yaml)
@@ -89,35 +90,6 @@ kubectl apply -f v1.34-files/dra-v134-gpu-workload.yaml
 ```bash
 kubectl get pods -l app=gpu-demo-v134
 kubectl describe deviceclass gpu-nvidia-v134
-```
-
-## Cloud GPU Setup
-
-### Google Cloud (GKE)
-```bash
-gcloud container clusters create gpu-cluster \
-  --accelerator type=nvidia-tesla-t4,count=1 \
-  --zone us-central1-a \
-  --enable-autoscaling \
-  --num-nodes 1
-```
-
-### AWS (EKS)
-```bash
-eksctl create cluster --name gpu-cluster \
-  --nodegroup-name gpu-nodes \
-  --node-type p3.2xlarge \
-  --nodes 1
-```
-
-### Azure (AKS)
-```bash
-az aks create \
-  --resource-group myResourceGroup \
-  --name gpu-cluster \
-  --node-count 1 \
-  --node-vm-size Standard_NC6s_v3 \
-  --enable-addons monitoring
 ```
 
 ## Demo Scenarios
@@ -185,6 +157,22 @@ kubectl apply -f v1.34-files/dra-v134-device-class.yaml
 # Use simulated demo instead
 kubectl apply -f v1.34-files/dra-v134-working.yaml
 ```
+v1.33 (Works):
+
+Uses custom CRDs that simulate GPU resources
+
+Doesn't require real GPUs or device plugins
+
+The CRDs create fake GPU resources
+
+v1.34 (Fails):
+
+Uses built-in DRA APIs that expect real GPU hardware
+
+Requires NVIDIA device plugin to expose GPU resources
+
+No fake/simulated resources available
+
 
 ## Performance Benchmarks
 
@@ -195,53 +183,7 @@ kubectl apply -f v1.34-files/dra-v134-working.yaml
 | **Setup Time** | 15 minutes | 5 minutes | 67% faster |
 | **Configuration Files** | 9 files | 5 files | 44% fewer |
 
-## Migration Guide
 
-### From v1.33 to v1.34
-1. **Remove CRDs**: No longer needed in v1.34
-2. **Update API versions**: `v1alpha3` → `v1`
-3. **Remove feature gates**: Built-in support
-4. **Scale workloads**: Increase from 4 to 8 pods per GPU
-
-### Migration Script
-```bash
-#!/bin/bash
-# Clean up v1.33 resources
-kubectl delete -f v1.33-files/
-
-# Deploy v1.34 resources  
-kubectl apply -f v1.34-files/dra-v134-working.yaml
-
-echo "Migration complete: 8 pods now sharing GPU resources"
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/improvement`)
-3. Test with both simulated and real GPU setups
-4. Submit pull request
-
-## Documentation
-
-- [Comprehensive Comparison POC](documentation/Kubernetes-v1.33-vs-v1.34-Proper-Comparison-POC.md)
-- [Technical Implementation Guide](documentation/Technical-Implementation-Guide.md)
-- [Cost-Benefit Analysis](documentation/DRA-Business-Comparison.md)
-
-## License
-
-MIT License - See [LICENSE](LICENSE) file for details.
-
-## Support
-
-For issues and questions:
-- Create GitHub issue
-- Check troubleshooting section
-- Review documentation folder
-
----
-
-**🚀 Ready to experience 2x GPU efficiency with Kubernetes v1.34!**
 
 
 
