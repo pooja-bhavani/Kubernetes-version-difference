@@ -84,6 +84,7 @@ kubectl apply -f v1.33-files/dra-v133-gpu-workload.yaml
 
 
 ### Deploy Ollama with DRA configuration
+[ollama-with-dra-v133.yaml](ollama-with-dra-v133.yaml)
 ```
 kubectl apply -f v1.33-files/ollama-with-dra-v133.yaml
 ```
