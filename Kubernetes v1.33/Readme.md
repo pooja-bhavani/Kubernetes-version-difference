@@ -137,7 +137,8 @@ kubectl port-forward svc/ollama-dra-v133-service 11434:11434
 <img width="1760" height="761" alt="image" src="https://github.com/user-attachments/assets/6d7af8fb-3767-43e5-897a-7f4ad22e5a8f" />
 <img width="2932" height="733" alt="image" src="https://github.com/user-attachments/assets/a211bf88-d8ab-4d12-8b66-73386a76b2f9" />
 
-
+### VolumeAttributesClass Test Result in v1.33
+[VolumeAttributesClass.yaml](VolumeAttributesClass/VolumeAttributesClass.yaml)
 
 
 
