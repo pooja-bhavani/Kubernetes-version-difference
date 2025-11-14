@@ -57,7 +57,7 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 - **Business Impact**: 87.5% cost reduction potential
 
 ### Install Custom Resource Definitions 
-[dra-v133-crds.yaml](dra-v133-crds.yaml)
+[dra-v133-crds.yaml](dra/dra-v133-crds.yaml)
 ```
 kubectl apply -f v1.33-files/dra-v133-crds.yaml
 ```
