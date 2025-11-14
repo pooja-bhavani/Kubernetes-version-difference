@@ -1,0 +1,32 @@
+apiVersion: storage.k8s.io/v1
+kind: VolumeAttributesClass
+metadata:
+  name: high-performance-ssd
+driverName: ebs.csi.aws.com
+parameters:
+  iops: "10000"
+  throughput: "1000"
+  type: "gp3"
+---
+apiVersion: storage.k8s.io/v1
+kind: VolumeAttributesClass
+metadata:
+  name: low-cost-ssd
+driverName: ebs.csi.aws.com
+parameters:
+  iops: "3000"
+  throughput: "125"
+  type: "gp3"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dynamic-volume-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: gp3
+  volumeAttributesClassName: low-cost-ssd  # Start with low-cost
