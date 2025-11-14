@@ -105,8 +105,9 @@ kubectl apply -f multi-container-v133-per-container-resources.yaml
 #### Demonstrates: Per-container allocation only, no sharing
 
 ### Test 2: Job Replacement Behavior
+[pod-replacement-policy-v133](dra/pod-replacement-policy-v133.yaml)
 ```
-kubectl apply -f pod-replacement-policy-v133. yaml
+kubectl apply -f pod-replacement-policy-v133.yaml
 ```
 #### Demonstrates: Immediate replacement, resource overlap
 
