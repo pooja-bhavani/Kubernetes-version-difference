@@ -120,4 +120,41 @@ sudo mv ./kind /usr/local/bin/kind
 ```
 kind version
 ```
+## Repository Structure
 
+```
+├── v1.33-files/           # Alpha DRA implementation
+│   ├── ollama-deployment-v1.33.yaml           # ollama testing
+│   ├── ollama-service-v1.33.yaml
+│   ├── dra
+│   ├──dra-v1.33-crds.yaml                     # Required CRDs
+│   ├── dra-v1.33-device-class.yaml            # v1alpha3 APIs
+│   ├── dra-v1.33-gpu-workload.yaml            # 4-pod sharing
+│   └── dra-v1.33-kind-cluster.yaml            # Feature gates required
+│   ├── volumesAttributesClass
+│   ├── volume-attributes-class-v133.yaml
+├── v1.34-files/           # Stable DRA implementation  
+│   ├── ollama-v134-deployment.yaml            # ollama testing
+│   ├── ollama-v134-service.yaml
+│   ├── dra.v1.34
+│   ├── dra-v1.34-working.yaml                 # 8-pod demo (no GPU needed)
+│   ├── dra-v1.34-gpu-workload.yaml            # REAL GPU: Requires actual hardware
+│   ├── dra-v1.34-device-class.yaml            # REAL GPU: Requires NVIDIA plugin
+│   └── pod-replacement-policy-v1.34.yaml      # Job improvements
+│   ├── volumesAttributesClass
+│   ├──
+
+```
+## Key Differences Explained
+
+### v1.33 (Alpha)
+- **API**: `resource.k8s.io/v1alpha3`
+- **Setup**: Requires custom CRDs (fake GPU simulation)
+- **Sharing**: 4 pods per GPU (simulated)
+- **Status**: Alpha (not production ready)
+
+### v1.34 (Stable)  
+- **API**: `resource.k8s.io/v1` (built-in)
+- **Setup**: No CRDs needed (native support)
+- **Sharing**: 8 pods per GPU (real or simulated)
+- **Status**: Stable (production ready)
