@@ -94,7 +94,7 @@ kubectl get pods -l app=ollama-dra-v133
 
 
 ### Test 1: Multi-container Resource Limitation
-[multi-container-v133-per-container-resources.yaml](multi-container-v133-per-container-resources.yaml)
+[multi-container-v133-per-container-resources.yaml](dra/multi-container-v133-per-container-resources.yaml)
 ```
 kubectl apply -f multi-container-v133-per-container-resources.yaml
 ```
