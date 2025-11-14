@@ -131,6 +131,8 @@ kubectl exec -it $POD_NAME -- ollama run llama3.2:1b
 ```
 <img width="1925" height="453" alt="image" src="https://github.com/user-attachments/assets/b66fb986-f72c-4eb4-9f8d-3400f88f5cb1" />
 <img width="2933" height="740" alt="image" src="https://github.com/user-attachments/assets/2550ae6d-9556-492e-950c-00cbe3c7b0a0" />
+![Uploading image.png…]()
+
 
 
 
