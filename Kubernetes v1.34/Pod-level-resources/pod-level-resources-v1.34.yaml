@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multi-container-app-v134
+  labels:
+    version: v1.34
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multi-container-v134
+  template:
+    metadata:
+      labels:
+        app: multi-container-v134
+    spec:
+      # Pod-level resource specification (NEW in v1.34)
+      resources:
+        requests:
+          memory: "896Mi"  # Total for all containers
+          cpu: "400m"
+        limits:
+          memory: "1792Mi"  # Total for all containers
+          cpu: "800m"
+      containers:
+      - name: web-server
+        image: nginx:1.21
+        # No individual resource limits needed!
+        # Containers share the pod-level pool
+      - name: cache
+        image: redis:7
+        # Dynamic allocation from pod pool
+      - name: worker
+        image: busybox:1.35
+        command: ["sh", "-c", "while true; do echo 'v1.34: Sharing pod resources dynamically'; sleep 30; done"]
+        # Flexible resource usage
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: multi-container-service-v134
+spec:
+  selector:
+    app: multi-container-v134
+  ports:
+  - port: 80
+    targetPort: 80
