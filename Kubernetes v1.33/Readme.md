@@ -80,8 +80,19 @@ kubectl apply -f v1.33-files/dra-v133-device-class.yaml
 ```
 kubectl apply -f v1.33-files/dra-v133-gpu-workload.yaml
 ```
+<img width="1473" height="309" alt="image" src="https://github.com/user-attachments/assets/13167abc-603e-4a88-88e0-5a4ac3673349" />
 
 
+### Deploy Ollama with DRA configuration
+```
+kubectl apply -f v1.33-files/ollama-with-dra-v133.yaml
+```
+
+### Check pods status
+```
+kubectl get pods -l app=ollama-dra-v133
+```
+<img width="1373" height="439" alt="image" src="https://github.com/user-attachments/assets/b8ea9b14-3948-4904-93ec-7a34d3703a90" />
 
 
 
