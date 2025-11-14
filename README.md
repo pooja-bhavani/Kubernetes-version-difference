@@ -142,7 +142,7 @@ kind version
 │   ├── dra-v1.34-device-class.yaml            # REAL GPU: Requires NVIDIA plugin
 │   └── pod-replacement-policy-v1.34.yaml      # Job improvements
 │   ├── volumesAttributesClass
-│   ├──
+│   ├── volume-attributes-class-v1.34.yaml
 
 ```
 ## Key Differences Explained
