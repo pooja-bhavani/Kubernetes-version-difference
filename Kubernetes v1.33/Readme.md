@@ -91,18 +91,24 @@ kubectl get pods -l app=ollama-dra-v133
 
 
 
-
 ### Test 1: Multi-container Resource Limitation
 ```
 kubectl apply -f multi-container-v133-per-container-resources.yaml
 ```
 #### Demonstrates: Per-container allocation only, no sharing
 
+<img width="1494" height="320" alt="image" src="https://github.com/user-attachments/assets/4e792d90-ab42-4eda-a53c-fc4217768f95" />
+
+#### Demonstrates: Per-container allocation only, no sharing
+
 ### Test 2: Job Replacement Behavior
 ```
-kubectl apply -f job-test-v133.yaml
+kubectl apply -f pod-replacement-policy-v133. yaml
 ```
 #### Demonstrates: Immediate replacement, resource overlap
+
+<img width="1489" height="575" alt="image" src="https://github.com/user-attachments/assets/6ff89a16-d519-44d6-b1b4-e98974cae0ee" />
+
 
 ### Test 3: DRA Alpha APIs
 
