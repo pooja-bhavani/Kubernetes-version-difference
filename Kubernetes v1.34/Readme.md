@@ -70,6 +70,7 @@ kubectl get pods -l app=gpu-demo-v134-working
 <img width="1535" height="673" alt="image" src="https://github.com/user-attachments/assets/8398cf4c-3c0b-42aa-950a-31119bca49f4" />
 
 **v1.34 Pod Replacement Policy**
+
 [pod-replacement-policy-v1.34.yaml](pod-replacement-policy-v1.34.yaml)
 
 ```
@@ -77,7 +78,8 @@ kubectl apply -f pod-replacement-policy-v1.34.yaml
 ```
 
 **v1.34 VolumeAttributesClass (works)**
-[volume-attributes-class-v1.34.yaml](volume-attributes-class-v1.34.yaml)
+
+[volume-attributes-class-v1.34.yaml](VolumeAttributesClass/volume-attributes-class-v1.34.yaml)
 ```
 kubectl apply -f volume-attributes-class-v1.34.yaml
 ```
