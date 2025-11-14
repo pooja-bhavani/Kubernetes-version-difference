@@ -27,6 +27,22 @@ kubectl exec -it ollama-v134-5c868b4dc4-z2qrw -- ollama pull llama3.2:1b
 ```
 <img width="1895" height="1079" alt="image" src="https://github.com/user-attachments/assets/f1cc729d-319f-441c-a1bb-0746e55f2200" />
 
+# 🔬 Advanced Feature Testing: Dynamic Resource Allocation (DRA)
+
+- v1.34 DRA uses stable APIs - no special cluster configuration needed
+- No feature gates required - DRA is built-in
+- Backward compatible - existing cluster can run v1.34 workloads
+
+
+
+
+
+
+
+
+
+
+
 ### Success Criteria for v1.34
 - Inference Speed: 50%+ improvement
 - Memory Efficiency: Dynamic allocation 2-4GB
