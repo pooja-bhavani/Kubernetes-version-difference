@@ -96,6 +96,9 @@ kubectl get jobs -w
 <img width="1903" height="697" alt="image" src="https://github.com/user-attachments/assets/0c3a946a-10fe-4f25-a213-bd2cfb50eba8" />
 <img width="1376" height="407" alt="image" src="https://github.com/user-attachments/assets/691d9a27-a48a-4077-81a9-fd3fba65bc45" />
 
+- echo "✅ v1.34: Smart replacement - only 1 failed pod replaced"
+- echo "❌ v1.33: Immediate replacement - resource overlap issues"
+
 ---
 
 ### Option 2: Real GPU Workload
