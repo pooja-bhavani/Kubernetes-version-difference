@@ -78,6 +78,7 @@ kubectl apply -f https://raw.githubusercontent.com/NVIDIA/k8s-device-plugin/v0.1
 
 **2. Deploy DRA Resources**
 [dra-v1.34-device-class.yaml](dra.v1.34/dra-v1.34-device-class.yaml)
+
 [dra-v1.34-gpu-workload.yaml](dra.v1.34/dra-v1.34-gpu-workload.yaml)
 ```bash
 kubectl apply -f v1.34-files/dra-v134-device-class.yaml
