@@ -151,12 +151,12 @@ kubectl apply -f volume-attributes-class-v133.yaml
 - ❌ No dynamic volume modification capability
 - ❌ Static storage only - can't optimize costs
 
-# v1.33 Pod-Level Resource Test
+## v1.33 Pod-Level Resource Test
 
 [container-level-resources-v1.33.yaml](Pod-level-resources/container-level-resources-v1.33.yaml)
 
 ```
-kubectl apply -f v1.33/container-level-resources-v1.33.yaml
+kubectl apply -f container-level-resources-v1.33.yaml
 ```
 <img width="1726" height="397" alt="image" src="https://github.com/user-attachments/assets/b7a22fb7-8770-4522-95b8-0877a020988b" />
 <img width="1724" height="1120" alt="image" src="https://github.com/user-attachments/assets/b8196082-dafd-4b31-acee-9cd44387d334" />
