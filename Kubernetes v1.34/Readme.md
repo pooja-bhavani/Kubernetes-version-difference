@@ -68,7 +68,7 @@ kubectl get pods -l app=gpu-demo-v134-working
 ### Option 2: Real GPU Workload
 
 **Prerequisites:**
-- GPU-enabled Kubernetes cluster (GKE, EKS, or local with NVIDIA GPUs)
+- Enabled Kubernetes cluster (GKE, EKS, or local with NVIDIA GPUs)
 - NVIDIA device plugin installed
 
 **1. Deploy NVIDIA Device Plugin**
@@ -112,11 +112,6 @@ kubectl apply -f v1.33-files/dra-v133-crds.yaml
 kubectl get deviceclasses  # Works directly
 ```
 
-### 3. Pod Replacement Policy
-```bash
-# v1.34 only: Intelligent job failure handling
-kubectl apply -f v1.34-files/pod-replacement-policy-v134.yaml
-```
 
 ## Cost Analysis
 
