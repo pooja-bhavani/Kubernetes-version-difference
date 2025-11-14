@@ -33,6 +33,19 @@ kubectl exec -it ollama-v134-5c868b4dc4-z2qrw -- ollama pull llama3.2:1b
 - No feature gates required - DRA is built-in
 - Backward compatible - existing cluster can run v1.34 workloads
 
+### Step 1: Check current cluster
+```
+kind get clusters
+```
+### Switching to the existing k8s-v134 cluster context
+```
+kubectl config use-context kind-k8s-v134
+```
+### # Deploy DeviceClass and ResourceClaimTemplate (stable v1 APIs)
+[dra-v1.34-device-class.yaml](dra.v1.34/dra-v1.34-device-class.yaml)
+```
+kubectl apply -f dra-v1.34-device-class.yaml 
+```
 
 
 
