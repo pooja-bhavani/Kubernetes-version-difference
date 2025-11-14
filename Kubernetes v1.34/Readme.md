@@ -1,4 +1,8 @@
+
+*This repository demonstrates the practical impact of upgrading Kubernetes from v1.33 to v1.34 for real-world AI/LLM workloads. It benchmarks efficiency, cost, and reliability using hands-on GPU simulations and production cluster scenarios.
+
 ### Phase 1: Environment Setup
+
 **Create K8s v1.34 cluster (check if available)**
 ```
 kind create cluster --name ollama-k8s-v134 --image kindest/node:v1.34.0
