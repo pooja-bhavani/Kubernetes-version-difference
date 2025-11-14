@@ -61,6 +61,8 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 ```
 kubectl apply -f v1.33-files/dra-v133-crds.yaml
 ```
+<img width="1409" height="228" alt="image" src="https://github.com/user-attachments/assets/7eed0445-c527-4df0-8844-e1f89201fd44" />
+
 ### Verify DRA APIs are available
 ```
 kubectl api-resources | grep -E "(deviceclass|resourceclaim)"
@@ -70,7 +72,7 @@ kubectl api-resources | grep -E "(deviceclass|resourceclaim)"
 ```
 kubectl apply -f v1.33-files/dra-v133-device-class.yaml
 ```
-# Create ResourceClaimTemplate
+## Create ResourceClaimTemplate
 
 [dra-v133-gpu-workload.yaml](dra-v133-gpu-workload.yaml)
 ```
