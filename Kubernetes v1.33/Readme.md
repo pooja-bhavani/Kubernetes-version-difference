@@ -65,9 +65,11 @@ kubectl apply -f v1.33-files/dra-v133-crds.yaml
 ```
 kubectl api-resources | grep -E "(deviceclass|resourceclaim)"
 ```
-
-
-
+## Create DeviceClass for GPU sharing
+[dra-v133-device-class.yaml](dra-v133-device-class.yaml)
+```
+kubectl apply -f v1.33-files/dra-v133-device-class.yaml
+```
 
 
 
