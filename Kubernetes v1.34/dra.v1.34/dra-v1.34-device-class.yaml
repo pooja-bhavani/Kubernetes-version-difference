@@ -1,0 +1,69 @@
+apiVersion: resource.k8s.io/v1  # Stable API!
+kind: DeviceClass
+metadata:
+  name: gpu-shared-v134
+spec:
+  selectors:
+  - cel:
+      expression: 'device.driver == "nvidia.com/gpu"'
+---
+apiVersion: resource.k8s.io/v1  # Stable API!
+kind: ResourceClaimTemplate
+metadata:
+  name: gpu-claim-v134
+spec:
+  spec:
+    devices:
+      requests:
+      - name: gpu
+        exactly:
+          count: 1
+          deviceClassName: gpu-shared-v134
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ollama-dra-v134
+  labels:
+    app: ollama-dra-v134
+    version: v1.34
+    feature: stable-dra
+spec:
+  replicas: 8  # 8:1 GPU sharing (vs 4:1 in v1.33)
+  selector:
+    matchLabels:
+      app: ollama-dra-v134
+  template:
+    metadata:
+      labels:
+        app: ollama-dra-v134
+    spec:
+      resourceClaims:
+      - name: gpu-claim
+        resourceClaimTemplateName: gpu-claim-v134
+      # Pod-level resources + DRA
+      resources:
+        requests:
+          memory: "256Mi"
+          cpu: "100m"
+        limits:
+          memory: "512Mi"
+          cpu: "200m"
+      containers:
+      - name: ollama
+        image: ollama/ollama:latest
+        ports:
+        - containerPort: 11434
+        env:
+        - name: OLLAMA_HOST
+          value: "0.0.0.0"
+        resources:
+          claims:
+          - name: gpu-claim
+        volumeMounts:
+        - name: ollama-data
+          mountPath: /root/.ollama
+      volumes:
+      - name: ollama-data
+        emptyDir:
+          sizeLimit: "2Gi"
