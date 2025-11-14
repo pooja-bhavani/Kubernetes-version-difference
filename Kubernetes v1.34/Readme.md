@@ -69,6 +69,18 @@ kubectl get pods -l app=gpu-demo-v134-working
 ```
 <img width="1535" height="673" alt="image" src="https://github.com/user-attachments/assets/8398cf4c-3c0b-42aa-950a-31119bca49f4" />
 
+**v1.34 Pod Replacement Policy**
+```
+kubectl apply -f pod-replacement-policy-v1.34.yaml
+```
+
+**Watch job behavior**
+```
+kubectl get jobs -w
+```
+<img width="1903" height="697" alt="image" src="https://github.com/user-attachments/assets/0c3a946a-10fe-4f25-a213-bd2cfb50eba8" />
+<img width="1376" height="407" alt="image" src="https://github.com/user-attachments/assets/691d9a27-a48a-4077-81a9-fd3fba65bc45" />
+
 ---
 
 ### Option 2: Real GPU Workload
@@ -173,11 +185,3 @@ v1.34 (Fails):
 
 
 
-
-
-
-### Success Criteria for v1.34
-- Inference Speed: 50%+ improvement
-- Memory Efficiency: Dynamic allocation 2-4GB
-- Reliability: Zero OOM kills
-- Scalability: Support multiple models
