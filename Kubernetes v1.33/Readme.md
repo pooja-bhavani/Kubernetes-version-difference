@@ -70,13 +70,13 @@ kubectl api-resources | grep -E "(deviceclass|resourceclaim)"
 <img width="1831" height="184" alt="image" src="https://github.com/user-attachments/assets/b22e53e0-87bc-4e2f-9b01-e1a37631b1e8" />
 
 ## Create DeviceClass for GPU sharing
-[dra-v133-device-class.yaml](dra-v133-device-class.yaml)
+[dra-v133-device-class.yaml](dra/v133-device-class.yaml)
 ```
 kubectl apply -f v1.33-files/dra-v133-device-class.yaml
 ```
 ## Create ResourceClaimTemplate
 
-[dra-v133-gpu-workload.yaml](dra/dra-v133-gpu-workload.yaml)
+[dra-v133-gpu-workload.yaml](dra/v133-gpu-workload.yaml)
 ```
 kubectl apply -f v1.33-files/dra-v133-gpu-workload.yaml
 ```
