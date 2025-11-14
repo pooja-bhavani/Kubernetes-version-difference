@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ai-training-job-v133
+  labels:
+    feature: legacy-job-behavior
+    version: v1.33
+spec:
+  # No podReplacementPolicy available in v1.33
+  parallelism: 4
+  completions: 4
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: ai-trainer
+        image: busybox:1.35
+        command: ["sh", "-c"]
+        args:
+        - |
+          echo "AI Training Job v1.33 (legacy behavior - immediate replacement)"
+          echo "Pod: $HOSTNAME"
+          echo "Simulating training workload..."
+          sleep 30
+          # Simulate random failure for demo
+          if [ $((RANDOM % 3)) -eq 0 ]; then
+            echo "Training failed - will be replaced efficiently"
+            exit 1
+          fi
+          echo "Training completed successfully"
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1"
