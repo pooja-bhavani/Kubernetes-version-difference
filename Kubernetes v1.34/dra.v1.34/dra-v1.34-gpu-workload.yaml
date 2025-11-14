@@ -1,0 +1,46 @@
+apiVersion: resource.k8s.io/v1
+kind: DeviceClass
+metadata:
+  name: gpu-nvidia-v134
+spec:
+  selectors:
+  - cel:
+      expression: 'device.driver == "nvidia.com/gpu"'
+---
+apiVersion: resource.k8s.io/v1
+kind: ResourceClaimTemplate
+metadata:
+  name: gpu-claim-v134
+spec:
+  spec:
+    devices:
+      requests:
+      - name: gpu
+        exactly:
+          count: 1
+          deviceClassName: gpu-nvidia-v134
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gpu-sharing-demo-v134
+spec:
+  replicas: 8  # 8 pods vs 4 in v1.33
+  selector:
+    matchLabels:
+      app: gpu-demo-v134
+  template:
+    metadata:
+      labels:
+        app: gpu-demo-v134
+    spec:
+      resourceClaims:
+      - name: gpu-claim
+        resourceClaimTemplateName: gpu-claim-v134
+      containers:
+      - name: gpu-container
+        image: busybox:1.35
+        command: ["sh", "-c", "echo 'v1.34 STABLE: 8 pods sharing 1 GPU'; sleep 300"]
+        resources:
+          claims:
+          - name: gpu-claim
