@@ -206,6 +206,7 @@ kubectl apply -f container-level-resources-v1.34.yaml
 ```
 <img width="1699" height="1045" alt="image" src="https://github.com/user-attachments/assets/043fdf35-3067-4856-acbf-38a201695a62" />
 
+
 **Pod-Level Resources Comparison Results**
 
 v1.33 (Container-Level) - Old Way 
@@ -225,7 +226,10 @@ web-server:  No individual limits     (shares from pod pool)
 cache:       No individual limits     (shares from pod pool)
 worker:      No individual limits     (shares from pod pool)
 ```
+Real Impact
+v1.33: If nginx needs more memory but redis is idle, nginx cannot use redis's unused memory.
 
+v1.34: If nginx needs more memory and redis is idle, nginx can use redis's unused memory from the shared pool.
 
 
 
