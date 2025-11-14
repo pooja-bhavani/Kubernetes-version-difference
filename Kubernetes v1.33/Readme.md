@@ -63,7 +63,8 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 ```
 kubectl apply -f v1.33-files/dra-v133-crds.yaml
 ```
-<img width="1409" height="228" alt="image" src="https://github.com/user-attachments/assets/7eed0445-c527-4df0-8844-e1f89201fd44" />
+<img width="1734" height="394" alt="image" src="https://github.com/user-attachments/assets/23cd19d8-1e3e-4ab1-845e-8595614b5069" />
+
 
 ### Verify DRA APIs are available
 ```
