@@ -149,19 +149,15 @@ kubectl apply -f v1.34-files/dra-v134-working.yaml
 
 v1.33 (Works):
 
-Uses custom CRDs that simulate GPU resources
-
-Doesn't require real GPUs or device plugins
-
-The CRDs create fake GPU resources
+- Uses custom CRDs that simulate GPU resources
+- Doesn't require real GPUs or device plugins
+- The CRDs create fake GPU resources
 
 v1.34 (Fails):
 
-Uses built-in DRA APIs that expect real GPU hardware
-
-Requires NVIDIA device plugin to expose GPU resources
-
-No fake/simulated resources available
+- Uses built-in DRA APIs that expect real GPU hardware
+- Requires NVIDIA device plugin to expose GPU resources
+- No fake/simulated resources available
 
 
 ## Performance Benchmarks
