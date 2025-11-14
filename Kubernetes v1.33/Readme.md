@@ -63,6 +63,8 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 ```
 kubectl apply -f v1.33-files/dra-v133-crds.yaml
 ```
+<img width="1409" height="228" alt="image" src="https://github.com/user-attachments/assets/b6662e28-f810-4980-84ac-a85e5f3bbefe" />
+
 <img width="1734" height="394" alt="image" src="https://github.com/user-attachments/assets/23cd19d8-1e3e-4ab1-845e-8595614b5069" />
 
 
