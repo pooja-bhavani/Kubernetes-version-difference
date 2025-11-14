@@ -129,9 +129,9 @@ POD_NAME=$(kubectl get pods -l app=ollama-dra-v133 -o jsonpath='{.items[0].metad
 kubectl exec -it $POD_NAME -- ollama pull llama3.2:1b
 kubectl exec -it $POD_NAME -- ollama run llama3.2:1b
 ```
-<img width="1925" height="453" alt="image" src="https://github.com/user-attachments/assets/b66fb986-f72c-4eb4-9f8d-3400f88f5cb1" />
+<img width="1760" height="761" alt="image" src="https://github.com/user-attachments/assets/6d7af8fb-3767-43e5-897a-7f4ad22e5a8f" />
 <img width="2933" height="740" alt="image" src="https://github.com/user-attachments/assets/2550ae6d-9556-492e-950c-00cbe3c7b0a0" />
-![Uploading image.png…]()
+
 
 
 
