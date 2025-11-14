@@ -56,13 +56,15 @@ kubectl exec -it <pod name> -- ollama run llama3.2:1b
 - **Solution**: DRA enables GPU sharing for AI workloads like Ollama
 - **Business Impact**: 87.5% cost reduction potential
 
-# Install Custom Resource Definitions
+### Install Custom Resource Definitions 
 [dra-v133-crds.yaml](dra-v133-crds.yaml)
 ```
 kubectl apply -f v1.33-files/dra-v133-crds.yaml
 ```
-
-
+### Verify DRA APIs are available
+```
+kubectl api-resources | grep -E "(deviceclass|resourceclaim)"
+```
 
 
 
