@@ -65,6 +65,8 @@ kubectl get pods -l app=gpu-demo-v134-working
 ```
 <img width="1535" height="673" alt="image" src="https://github.com/user-attachments/assets/8398cf4c-3c0b-42aa-950a-31119bca49f4" />
 
+---
+
 ### Option 2: Real GPU Workload
 
 **Prerequisites:**
@@ -81,7 +83,7 @@ kubectl apply -f https://raw.githubusercontent.com/NVIDIA/k8s-device-plugin/v0.1
 [dra-v1.34-device-class.yaml](dra.v1.34/dra-v1.34-device-class.yaml)
 
 [dra-v1.34-gpu-workload.yaml](dra.v1.34/dra-v1.34-gpu-workload.yaml)
-```bash
+```
 kubectl apply -f v1.34-files/dra-v134-device-class.yaml
 kubectl apply -f v1.34-files/dra-v134-gpu-workload.yaml
 ```
@@ -112,19 +114,6 @@ kubectl apply -f v1.33-files/dra-v133-crds.yaml
 kubectl get deviceclasses  # Works directly
 ```
 
-
-## Cost Analysis
-
-### Single GPU Workload
-- **v1.33**: $1000/month ÷ 4 pods = $250 per workload
-- **v1.34**: $1000/month ÷ 8 pods = $125 per workload
-- **Savings**: 50% cost reduction
-
-### Enterprise Scale (100 workloads)
-- **v1.33**: 25 GPUs needed = $25,000/month
-- **v1.34**: 13 GPUs needed = $13,000/month  
-- **Annual Savings**: $144,000
-
 ## Troubleshooting
 
 ### Common Issues
@@ -152,6 +141,8 @@ kubectl apply -f v1.34-files/dra-v134-device-class.yaml
 # Use simulated demo instead
 kubectl apply -f v1.34-files/dra-v134-working.yaml
 ```
+#### Key Differences 
+
 v1.33 (Works):
 
 Uses custom CRDs that simulate GPU resources
