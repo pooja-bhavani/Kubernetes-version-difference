@@ -98,7 +98,6 @@ kubectl apply -f multi-container-v133-per-container-resources.yaml
 ```
 #### Demonstrates: Per-container allocation only, no sharing
 
-
 ### Test 2: Job Replacement Behavior
 ```
 kubectl apply -f job-test-v133.yaml
@@ -114,10 +113,18 @@ kubectl apply -f v1.33-files/ollama-with-dra-v133.yaml
 ```
 #### Demonstrates: Alpha APIs, manual setup required
 
+### Get pod name for DRA-enabled Ollama
+```
+POD_NAME=$(kubectl get pods -l app=ollama-dra-v133 -o jsonpath='{.items[0].metadata.name}')
+```
 
-
-
-
+### Test Ollama in DRA-enabled pod
+```
+kubectl exec -it $POD_NAME -- ollama pull llama3.2:1b
+kubectl exec -it $POD_NAME -- ollama run llama3.2:1b
+```
+<img width="1925" height="453" alt="image" src="https://github.com/user-attachments/assets/b66fb986-f72c-4eb4-9f8d-3400f88f5cb1" />
+<img width="2933" height="740" alt="image" src="https://github.com/user-attachments/assets/2550ae6d-9556-492e-950c-00cbe3c7b0a0" />
 
 
 
