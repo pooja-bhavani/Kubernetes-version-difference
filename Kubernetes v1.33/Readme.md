@@ -158,6 +158,9 @@ kubectl apply -f volume-attributes-class-v133.yaml
 ```
 kubectl apply -f v1.33/container-level-resources-v1.33.yaml
 ```
+<img width="1726" height="397" alt="image" src="https://github.com/user-attachments/assets/b7a22fb7-8770-4522-95b8-0877a020988b" />
+<img width="1724" height="1120" alt="image" src="https://github.com/user-attachments/assets/b8196082-dafd-4b31-acee-9cd44387d334" />
+<img width="1559" height="818" alt="image" src="https://github.com/user-attachments/assets/95fa91f1-d7ae-4d3e-ba4c-7e47a10eab54" />
 
 
 ### Kubernetes v1.33
