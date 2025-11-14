@@ -28,4 +28,4 @@ spec:
       limits:
         memory: "512Mi"
         cpu: "200m"
-  # Total: 2Gi requests, 4Gi limits (vs pod-level sharing in v1.34)
+ 
