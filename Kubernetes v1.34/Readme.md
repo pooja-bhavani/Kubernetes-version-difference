@@ -197,7 +197,26 @@ v1.34 (Fails):
 - Requires NVIDIA device plugin to expose GPU resources
 - No fake/simulated resources available
 
+---
+## v1.34 Pod-Level Resource Test
+[pod-level-resources-v1.34.yaml](Pod-level-resources/pod-level-resources-v1.34.yaml)
 
+```
+kubectl apply -f container-level-resources-v1.34.yaml
+```
+
+
+
+
+
+
+
+
+
+
+
+
+---
 ## Performance Benchmarks
 
 | Metric | v1.33 | v1.34 | Improvement |
