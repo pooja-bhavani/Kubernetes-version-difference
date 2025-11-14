@@ -153,7 +153,8 @@ kubectl apply -f volume-attributes-class-v133.yaml
 
 # v1.33 Pod-Level Resource Test
 
-[container-level-resources-v1.33.yaml](Pod-Level Resources Comparison/container-level-resources-v1.33.yaml)
+[container-level-resources-v1.33.yaml](Pod-level-resources/container-level-resources-v1.33.yaml)
+
 ```
 kubectl apply -f v1.33/container-level-resources-v1.33.yaml
 ```
