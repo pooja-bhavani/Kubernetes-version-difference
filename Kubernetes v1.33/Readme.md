@@ -1,4 +1,3 @@
-
 ## Cluster Creation
 
 ## Simple Start (Recommended)
@@ -152,8 +151,12 @@ kubectl apply -f volume-attributes-class-v133.yaml
 - ❌ No dynamic volume modification capability
 - ❌ Static storage only - can't optimize costs
 
+# v1.33 Pod-Level Resource Test
 
-
+[container-level-resources-v1.33.yaml](container-level-resources-v1.33.yaml)
+```
+kubectl apply -f v1.33/container-level-resources-v1.33.yaml
+```
 
 
 ### Kubernetes v1.33
