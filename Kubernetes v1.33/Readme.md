@@ -146,9 +146,9 @@ kubectl apply -f volume-attributes-class-v133.yaml
 <img width="2283" height="465" alt="image" src="https://github.com/user-attachments/assets/93d455f9-d847-4b93-b11a-9ebfdad1e052" />
 
 This proves v1.33 limitation:
-❌ VolumeAttributesClass NOT SUPPORTED in v1.33
-❌ No dynamic volume modification capability
-❌ Static storage only - can't optimize costs
+- ❌ VolumeAttributesClass NOT SUPPORTED in v1.33
+- ❌ No dynamic volume modification capability
+- ❌ Static storage only - can't optimize costs
 
 
 
