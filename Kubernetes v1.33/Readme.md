@@ -70,9 +70,12 @@ kubectl api-resources | grep -E "(deviceclass|resourceclaim)"
 ```
 kubectl apply -f v1.33-files/dra-v133-device-class.yaml
 ```
+# Create ResourceClaimTemplate
 
-
-
+[dra-v133-gpu-workload.yaml](dra-v133-gpu-workload.yaml)
+```
+kubectl apply -f v1.33-files/dra-v133-gpu-workload.yaml
+```
 
 
 
