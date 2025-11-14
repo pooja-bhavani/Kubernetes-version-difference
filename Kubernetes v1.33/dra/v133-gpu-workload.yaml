@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gpu-sharing-demo-v133
+  labels:
+    version: v1.33
+    demo: gpu-sharing
+spec:
+  replicas: 4  # 4 pods sharing GPUs
+  selector:
+    matchLabels:
+      app: gpu-demo
+  template:
+    metadata:
+      labels:
+        app: gpu-demo
+    spec:
+      resourceClaims:
+      - name: gpu-claim
+        source:
+          resourceClaimTemplateName: gpu-claim-template
+      containers:
+      - name: gpu-container
+        image: busybox:1.35
+        command: ["sh", "-c", "echo 'GPU workload running on v1.33'; sleep 300"]
+        resources:
+          claims:
+          - name: gpu-claim
