@@ -238,6 +238,10 @@ v1.34: If nginx needs more memory and redis is idle, nginx can use redis's unuse
 ```
 kind create cluster --config kind-config-v134-features.yaml
 ```
+<img width="1768" height="724" alt="image" src="https://github.com/user-attachments/assets/815c64ff-797e-4329-9c0f-2fc019c36ee7" />
+
+**Enable Feature Gate by default there are not present in v1.34**
+
 ### Kubernetes Feature States
 
 ### Container Restart Rules Availability
@@ -247,10 +251,9 @@ kind create cluster --config kind-config-v134-features.yaml
 | **v1.33** | ❌ Does not exist | No |
 | **v1.34** | ✅ Alpha (feature gate required) | Yes, with `ContainerRestartRules=true` |
 
-- v1.33: Only has global restartPolicy for entire pod
-- v1.34: Introduces per-container restartPolicy and restartPolicyRules (Alpha)
-
-
+Working Features
+Per-container restartPolicy: Each container can have its own restart behavior
+Supported policies: Always, Never, OnFailure
 
 
 
