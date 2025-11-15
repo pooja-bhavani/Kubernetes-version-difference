@@ -160,10 +160,10 @@ kubectl apply -f volume-attributes-class-v133.yaml
 
 ## v1.33 Pod-Level Resource Test
 
-[container-level-resources-v1.33.yaml](Pod-level-resources/container-level-resources-v1.33.yaml)
+[restart-policy-global-v1.33.yaml](Pod-level-resources/restart-policy-global-v1.33.yaml)
 
 ```
-kubectl apply -f container-level-resources-v1.33.yaml
+kubectl apply -f restart-policy-global-v1.33.yaml
 ```
 <img width="1726" height="397" alt="image" src="https://github.com/user-attachments/assets/b7a22fb7-8770-4522-95b8-0877a020988b" />
 <img width="1724" height="1120" alt="image" src="https://github.com/user-attachments/assets/b8196082-dafd-4b31-acee-9cd44387d334" />
