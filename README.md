@@ -111,28 +111,35 @@ kind version
 ## Repository Structure
 
 ```
-├── v1.33-files/           # Alpha DRA implementation
+├── v1.33-files/                # v1.33 Alpha implementations
 │   ├── ollama-deployment-v1.33.yaml           # ollama testing
 │   ├── ollama-service-v1.33.yaml
 │   ├── dra
-│   ├──dra-v1.33-crds.yaml                     # Required CRDs
-│   ├── dra-v1.33-device-class.yaml            # v1alpha3 APIs
-│   ├── dra-v1.33-gpu-workload.yaml            # 4-pod sharing
-│   └── dra-v1.33-kind-cluster.yaml            # Feature gates required
-│   ├── volumesAttributesClass
-│   ├── volume-attributes-class-v133.yaml
-├── v1.34-files/           # Stable DRA implementation  
+│   ├── dra-v133-crds.yaml         # DRA CRDs required
+│   ├── dra-v133-device-class.yaml # v1alpha3 APIs
+│   ├── dra-v133-gpu-workload.yaml # 4-pod GPU sharing
+│   └── dra-v133-kind-cluster.yaml # Feature gates
+├── v1.34-files/                   # v1.34 Stable implementations
 │   ├── ollama-v134-deployment.yaml            # ollama testing
 │   ├── ollama-v134-service.yaml
 │   ├── dra.v1.34
-│   ├── dra-v1.34-working.yaml                 # 8-pod demo (no GPU needed)
-│   ├── dra-v1.34-gpu-workload.yaml            # REAL GPU: Requires actual hardware
-│   ├── dra-v1.34-device-class.yaml            # REAL GPU: Requires NVIDIA plugin
-│   └── pod-replacement-policy-v1.34.yaml      # Job improvements
-│   ├── volumesAttributesClass
-│   ├── volume-attributes-class-v1.34.yaml
-
+│   ├── dra-v134-working.yaml      # 8-pod GPU demo
+│   ├── dra-v134-gpu-workload.yaml # Real GPU workload
+│   ├── dra-v134-device-class.yaml # Stable v1 APIs
+│   └── pod-replacement-policy-v134.yaml # Smart job handling
+├── volumes/                        # VolumeAttributesClass demos
+│   ├── v1.33/volume-attributes-class-v133.yaml
+│   └── v1.34/volume-attributes-class-v134.yaml
+├── pod-level-resources/            # Resource sharing demos
+│   ├── v1.33/container-level-resources-v133.yaml
+│   └── v1.34/pod-level-resources-v134.yaml
+├── container-restart-rules/        # Restart policy demos
+│   ├── v1.33/restart-policy-global-v133.yaml
+│   └── v1.34/restart-policy-per-container-v134.yaml
 ```
+
+
+
 ## Key Differences Explained
 
 ### v1.33 (Alpha)
