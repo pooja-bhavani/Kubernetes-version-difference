@@ -173,8 +173,7 @@ kubectl apply -f container-level-resources-v1.33.yaml
 
 ### container-restart-rules testing
 
-[restart-policy-global-v1.33.yaml](Pod-level-resources/restart-policy-global-v1.33.yaml)
-
+[restart-policy-global-v1.33.yaml](container-restart-rules/restart-policy-global-v1.33.yaml)
 ```
 kubectl apply -f restart-policy-global-v133.yaml
 ```
