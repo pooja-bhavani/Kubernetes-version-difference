@@ -252,8 +252,8 @@ kind create cluster --config kind-config-v134-features.yaml
 | **v1.34** | ✅ Alpha (feature gate required) | Yes, with `ContainerRestartRules=true` |
 
 Working Features
-Per-container restartPolicy: Each container can have its own restart behavior
-Supported policies: Always, Never, OnFailure
+- Per-container restartPolicy: Each container can have its own restart behavior
+- Supported policies: Always, Never, OnFailure
 
 
 
