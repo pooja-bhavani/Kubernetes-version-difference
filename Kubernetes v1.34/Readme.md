@@ -230,7 +230,30 @@ Real Impact
 v1.33: If nginx needs more memory but redis is idle, nginx cannot use redis's unused memory.
 
 v1.34: If nginx needs more memory and redis is idle, nginx can use redis's unused memory from the shared pool.
+---
 
+## container-restart-rules testing
+[kind-config-v134-features.yaml](container-restart-rules/kind-config-v134-features.yaml)
+
+```
+kind create cluster --config kind-config-v134-features.yaml
+```
+### Kubernetes Feature States
+
+Container Restart Rules Availability:
+
+| Status | Default State | Requires |
+|--------|----------------|----------|
+| **Alpha** | ❌ Disabled by default | Feature gate required |
+| **Beta** | ✅ Enabled by default | Can be disabled |
+| **GA / Stable** | ✅ Enabled by default | Cannot be disabled |
+
+### Container Restart Rules Availability
+
+| Version | Status | Available |
+|---------|---------|-----------|
+| **v1.33** | ❌ Does not exist | No |
+| **v1.34** | ✅ Alpha (feature gate required) | Yes, with `ContainerRestartRules=true` |
 
 
 
