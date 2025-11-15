@@ -121,6 +121,7 @@ kubectl apply -f pod-replacement-policy-v133.yaml
 ### Test 3: DRA Alpha APIs
 
 - Deploy Ollama with DRA configuration
+  
 [ollama-with-dra-v133.yaml](dra/ollama-with-dra-v133.yaml)
 ```
 kubectl apply -f v1.33-files/ollama-with-dra-v133.yaml
