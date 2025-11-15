@@ -255,11 +255,6 @@ Working Features
 - Per-container restartPolicy: Each container can have its own restart behavior
 - Supported policies: Always, Never, OnFailure
 
-
-
-
-
-
 ---
 ## Performance Benchmarks
 
