@@ -240,20 +240,15 @@ kind create cluster --config kind-config-v134-features.yaml
 ```
 ### Kubernetes Feature States
 
-Container Restart Rules Availability:
-
-| Status | Default State | Requires |
-|--------|----------------|----------|
-| **Alpha** | ❌ Disabled by default | Feature gate required |
-| **Beta** | ✅ Enabled by default | Can be disabled |
-| **GA / Stable** | ✅ Enabled by default | Cannot be disabled |
-
 ### Container Restart Rules Availability
 
 | Version | Status | Available |
 |---------|---------|-----------|
 | **v1.33** | ❌ Does not exist | No |
 | **v1.34** | ✅ Alpha (feature gate required) | Yes, with `ContainerRestartRules=true` |
+
+- v1.33: Only has global restartPolicy for entire pod
+- v1.34: Introduces per-container restartPolicy and restartPolicyRules (Alpha)
 
 
 
