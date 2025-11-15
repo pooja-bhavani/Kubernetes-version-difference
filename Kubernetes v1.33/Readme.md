@@ -162,6 +162,18 @@ kubectl apply -f container-level-resources-v1.33.yaml
 <img width="1724" height="1120" alt="image" src="https://github.com/user-attachments/assets/b8196082-dafd-4b31-acee-9cd44387d334" />
 <img width="1559" height="818" alt="image" src="https://github.com/user-attachments/assets/95fa91f1-d7ae-4d3e-ba4c-7e47a10eab54" />
 
+### container-restart-rules testing
+
+[restart-policy-global-v1.33.yaml](Pod-level-resources/restart-policy-global-v1.33.yaml)
+
+```
+kubectl apply -f restart-policy-global-v133.yaml
+```
+<img width="1573" height="650" alt="image" src="https://github.com/user-attachments/assets/df34d8e9-c0a2-497b-9ad3-b2f191f196d0" />
+
+**v1.33: Global restart policy only causes all containers to restart together**
+
+
 
 ### Kubernetes v1.33
 **Advantages:**
