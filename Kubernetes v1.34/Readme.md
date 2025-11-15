@@ -1,3 +1,4 @@
+# Why Kubernetes Users Migrated to v1.34
 
 *This repository demonstrates the practical impact of upgrading Kubernetes from v1.33 to v1.34 for real-world AI/LLM workloads. It benchmarks efficiency, cost, and reliability using hands-on GPU simulations and production cluster scenarios.*
 
