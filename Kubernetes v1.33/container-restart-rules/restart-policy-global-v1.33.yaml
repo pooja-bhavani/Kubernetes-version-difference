@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: restart-test-v133
+  labels:
+    version: v1.33
+    test: restart-policy
+spec:
+  restartPolicy: Always  # GLOBAL - applies to ALL containers
+  containers:
+  - name: web-server
+    image: nginx:1.21
+    ports:
+    - containerPort: 80
+  - name: init-task
+    image: busybox:1.35
+    command: ["sh", "-c"]
+    args:
+    - |
+      echo "v1.33: Init task starting..."
+      sleep 15
+      echo "Init task completed - but will restart due to global policy"
+      exit 0  # Success, but v1.33 will restart it anyway
+  - name: worker
+    image: busybox:1.35
+    command: ["sh", "-c"]
+    args:
+    - |
+      echo "v1.33: Worker starting..."
+      sleep 20
+      echo "Worker failed - should restart"
+      exit 1  # Failure - restart makes sense
